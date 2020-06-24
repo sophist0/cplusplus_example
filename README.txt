@@ -158,7 +158,7 @@ Node Class
 		parent node id
 		parent move producing current node
 		node depth (number of nodes required to reach node)
-		node cost (f(n) estimated cost to get to the goal from the root node via node n)
+		node cost (f(n) estimated cost to get to the goal from the root node via node n. Confusingly this is initialized to something else andthen updated by A-Star)
 		puzzle state
 
 	Functions

@@ -59,8 +59,6 @@ void run_a_man(string fname){
 
 	bool solved = false;
 	int count = 0;
-	int numex_nodes = 0;
-	int maxint = 10000;
 	int idx; // index of node to expand from open nodes
 	while (solved == false){
 
@@ -79,7 +77,6 @@ void run_a_man(string fname){
 				min_fn = fn;
 				idx = i;
 			}
-
 		}
 
 		// check if node to be expanded is a solution state
@@ -168,6 +165,7 @@ int get_fn(Node c_node, std::unordered_map<std::string, int> man_dict){
 }
 
 std::unordered_map<std::string,int> precom_man(State state){
+	/** Pre-compute the Manhattan distances */
 
 	State c_state = state.clone_state();
 	int rows = c_state.p_rows;
@@ -219,7 +217,7 @@ std::unordered_map<std::string,int> precom_man(State state){
 }
 
 
-// Pre-compute for each location to save time
+// Pre-compute for each location to save time?
 int get_manhattan(State c_state){
 
 	int rows = c_state.p_rows;
